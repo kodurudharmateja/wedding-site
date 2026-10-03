@@ -1,0 +1,10 @@
+#lb{position:fixed;inset:0;z-index:200;background:rgba(20,12,9,.95);display:none;place-items:center;touch-action:pan-y}
+#lb.open{display:grid}
+#lb .stage{width:min(92vw,1000px);height:80vh;display:grid;place-items:center;color:var(--cream)}
+#lb .stage .ph{height:100%;aspect-ratio:auto;width:100%;cursor:default}
+#lb .stage img{object-fit:contain;background:#000}
+#lb button{position:absolute;background:none;border:1px solid rgba(217,164,65,.6);color:var(--cream);width:48px;height:48px;border-radius:50%;font-size:1.3rem;cursor:pointer}
+#lb .x{top:calc(16px + env(safe-area-inset-top,0px));right:16px}
+#lb .pv{left:12px;top:50%}
+#lb .nx{right:12px;top:50%}
+#lb .cap{position:absolute;bottom:calc(18px + env(safe-area-inset-bottom,0px));color:var(--cream);font:italic 1.1rem var(--serif)}

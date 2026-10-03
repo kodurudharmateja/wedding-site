@@ -1,0 +1,18 @@
+#gallery{background:var(--cream)}
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(70px,11vw,140px);gap:12px;margin-top:50px}
+.gal .ph{aspect-ratio:auto;cursor:zoom-in;border:0;padding:0;display:block;width:100%;height:100%}
+.gal .ph.pol{border:8px solid #fff;border-bottom-width:28px;transform:rotate(-1.5deg);box-shadow:0 10px 24px -10px rgba(0,0,0,.4)}
+.gal .ph.pol:nth-child(odd){transform:rotate(1.8deg)}
+/* tile shapes: w=wide p=portrait s=small h=half f=full */
+.s-w{grid-column:span 4;grid-row:span 3}
+.s-p{grid-column:span 2;grid-row:span 3}
+.s-s{grid-column:span 2;grid-row:span 2}
+.s-h{grid-column:span 3;grid-row:span 2}
+.s-f{grid-column:span 6;grid-row:span 3}
+@media(max-width:700px){
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:34vw}
+  .s-w,.s-f{grid-column:span 2;grid-row:span 2}
+  .s-p{grid-column:span 1;grid-row:span 2}
+  .s-s{grid-column:span 1;grid-row:span 1}
+  .s-h{grid-column:span 2;grid-row:span 2}
+}

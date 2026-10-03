@@ -1,0 +1,2 @@
+footer{background:var(--char);color:var(--cream);text-align:center;padding:40px 6vw calc(80px + env(safe-area-inset-bottom,0px));font-size:.9rem;border-top:6px double var(--gold)}
+footer a{margin:0 10px}

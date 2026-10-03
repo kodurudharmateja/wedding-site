@@ -1,0 +1,15 @@
+#intro{position:fixed;inset:0;z-index:100;background:var(--char);color:var(--cream);display:grid;place-items:center;text-align:center;overflow:hidden;transition:opacity 1.4s,visibility 1.4s}
+#intro.gone{opacity:0;visibility:hidden}
+#intro .glow{position:absolute;left:50%;bottom:18%;width:160vmax;height:160vmax;transform:translate(-50%,50%) scale(.05);background:radial-gradient(circle,rgba(232,150,50,.55),rgba(184,48,31,.25) 25%,transparent 55%);animation:expand 6s 1.2s forwards ease-out}
+@keyframes expand{to{transform:translate(-50%,50%) scale(.6)}}
+#intro .temple{position:absolute;left:0;right:0;bottom:0;width:100%;max-width:900px;margin:auto;opacity:0;animation:fade 4s 2.6s forwards}
+@keyframes fade{to{opacity:1}}
+.diya{position:absolute;left:50%;bottom:16%;transform:translateX(-50%);width:54px;opacity:0;animation:fade 1.6s .4s forwards;z-index:2}
+.flame{transform-origin:50% 100%;animation:flick 1.8s infinite ease-in-out}
+@keyframes flick{0%,100%{transform:scale(1,1) rotate(-1deg)}30%{transform:scale(.92,1.08) rotate(2deg)}60%{transform:scale(1.05,.95) rotate(-2deg)}}
+.reveal{position:relative;z-index:3;opacity:0;animation:fade 2.4s 5s forwards;padding:0 6vw;margin-bottom:22vh}
+.reveal .shl{font-family:var(--tel);color:var(--gold);font-size:1.15rem;margin-bottom:1.4rem}
+.reveal small{letter-spacing:.35em;font-size:.72rem;text-transform:uppercase;color:var(--gold)}
+.reveal h1{font-size:clamp(2.6rem,9vw,6rem);margin:.5rem 0}
+.reveal .amp{display:block;font-style:italic;color:var(--gold);font-size:.5em}
+.reveal p{margin:1rem 0 1.8rem;opacity:.85}

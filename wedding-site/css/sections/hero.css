@@ -1,0 +1,6 @@
+#home{min-height:100svh;display:grid;place-items:center;text-align:center;overflow:hidden;color:var(--cream)}
+#home .bg{position:absolute;inset:-10% 0;background:radial-gradient(ellipse at 50% 100%,rgba(184,48,31,.55),transparent 60%),linear-gradient(var(--char),#2b0f0d)}
+#home .temple{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(1000px,130%);opacity:.9}
+#home .in{position:relative;z-index:2;margin-bottom:12vh}
+#home h1{font-size:clamp(3rem,11vw,8rem)}
+#home .amp{font-style:italic;color:var(--gold);display:block;font-size:.4em;margin:.1em 0}

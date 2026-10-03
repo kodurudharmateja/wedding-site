@@ -1,0 +1,10 @@
+#invitation{background:var(--cream)}
+.card-stage{perspective:1200px;display:grid;place-items:center}
+.card{position:relative;width:min(560px,100%);padding:clamp(40px,8vw,64px) clamp(26px,6vw,56px);background:linear-gradient(135deg,#fffaf0,#f4e6c8);text-align:center;transform-style:preserve-3d;transition:transform .15s;box-shadow:0 30px 70px -20px rgba(90,18,32,.45);color:var(--ink)}
+.card::before{content:"";position:absolute;inset:12px;border:1.5px solid var(--gold);outline:5px double var(--vermilion);outline-offset:-10px;pointer-events:none}
+.card .sig{font-family:var(--tel);color:var(--vermilion);font-size:1rem}
+.card h2{font-size:clamp(2.2rem,7vw,3.3rem);margin:.7rem 0}
+.card h2 em{display:block;font-size:.42em;color:var(--terracotta);margin:.2em 0}
+.card p.msg{margin:18px 0;font:italic 1.2rem/1.6 var(--serif)}
+.card dl{font-family:var(--serif);font-size:1.25rem;color:var(--maroon)}
+.card svg.top{width:150px;margin:0 auto 10px;display:block}

@@ -1,0 +1,7 @@
+#music{position:fixed;right:max(16px,3vw);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:70;display:flex;align-items:center;gap:8px;padding:11px 18px;border-radius:40px;border:1px solid var(--gold);background:rgba(20,12,9,.85);color:var(--cream);font:500 .8rem var(--sans);cursor:pointer;backdrop-filter:blur(8px)}
+#music .bars{display:flex;gap:2px;align-items:flex-end;height:12px}
+#music .bars i{width:2px;height:4px;background:var(--gold)}
+#music.on .bars i{animation:eq .9s infinite ease-in-out}
+#music.on .bars i:nth-child(2){animation-delay:.2s}
+#music.on .bars i:nth-child(3){animation-delay:.4s}
+@keyframes eq{50%{height:12px}}

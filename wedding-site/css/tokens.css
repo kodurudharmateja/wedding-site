@@ -1,0 +1,8 @@
+/* Design tokens: colours, fonts. Change the look of the whole site here. */
+:root{
+  --maroon:#5a1220;--vermilion:#b8301f;--terracotta:#c0623c;--gold:#d9a441;--turmeric:#e8b12e;
+  --cream:#f6ecd9;--ivory:#fbf6ea;--brown:#2b1710;--char:#140c09;--ink:#3a2218;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Hanken Grotesk',system-ui,sans-serif;
+  --tel:'Noto Serif Telugu',serif;
+}

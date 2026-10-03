@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Wedding of Dharmateja &amp; Yashwanth</title>
+<meta name="description" content="Join us in celebrating the wedding of Dharmateja &amp; Yashwanth on 20-08-2021 atHyderabad sreeram ibp.">
+<meta property="og:title" content="The Wedding of Dharmateja &amp; Yashwanth">
+<meta property="og:description" content="Join us in celebrating the wedding on 20-08-2021.">
+<meta property="og:image" content="[SOCIAL_SHARE_IMAGE]">
+<link rel="canonical" href="[CANONICAL_URL]">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Hanken+Grotesk:wght@400;500&family=Noto+Serif+Telugu:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+  /* first screen (before clicking Enter) */
+  #intro {
+    background:
+      linear-gradient(rgba(15,8,5,.55), rgba(15,8,5,.8)),
+      url("assets/images/intro-bg.jpg") center / cover no-repeat !important;
+  }
+
+  /* hero (after clicking Enter) */
+  #home {
+    background:
+      linear-gradient(rgba(15,8,5,.5), rgba(15,8,5,.75)),
+      url("assets/images/image.png") center / cover no-repeat !important;
+  }
+  #parBg { background: none !important; }
+  #home .in { position: relative; z-index: 2; }
+
+  /* remove the temple + diya */
+  #introTemple, #intro .diya, #homeTemple { display: none !important; }
+</style>
+
+</head>
+<body class="locked">
+
+<!-- ============ INTRO ============ -->
+<div id="intro" role="dialog" aria-label="Wedding invitation opening">
+  <div class="glow"></div>
+  <svg class="temple" id="introTemple" viewBox="0 0 900 360" aria-hidden="true"></svg>
+  <svg class="diya" viewBox="0 0 54 50" aria-hidden="true"><g class="flame"><path d="M27 2c8 9 10 17 0 25-10-8-8-16 0-25z" fill="#f6a93a"/><path d="M27 12c4 5 5 9 0 13-5-4-4-8 0-13z" fill="#fff0b8"/></g><path d="M3 30h48c0 11-10 18-24 18S3 41 3 30z" fill="#8a3a1c" stroke="#d9a441"/></svg>
+  <div class="reveal">
+    <p class="shl" lang="sa">॥ श्री गणेशाय नमः ॥</p>
+    <small>The Wedding of</small>
+    <h1 data-bride></h1>
+    <h1><span class="amp">&amp;</span><span data-groom></span></h1>
+    <p><span data-date></span> · <span data-city></span></p>
+    <button class="btn" id="enter">Enter the celebration</button>
+    <p><span > Om Shree Ganeshay Namah </span></p>
+    <small>Save the date!</small>
+
+  </div>
+</div>
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<!-- ============ NAV + MUSIC ============ -->
+<nav id="nav" aria-label="Main">
+  <a class="logo" href="#home" data-initials></a>
+  <button id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span></button>
+  <ul id="menu"></ul>
+</nav>
+<button id="music" aria-pressed="false"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span>♪ Music</span></button>
+
+<main>
+<!-- ============ HERO ============ -->
+<section id="home" class="dark">
+  <div class="bg" id="parBg"></div>
+  <svg class="temple" id="homeTemple" viewBox="0 0 900 360" aria-hidden="true"></svg>
+  <div class="in">
+    <p class="tel" lang="te">శుభ వివాహము</p>
+    <h1 data-bride></h1><h1><span class="amp">&amp;</span><span data-groom></span></h1>
+    <p class="sub"><span data-date></span> · <span data-venue></span></p>
+  </div>
+</section>
+
+<!-- ============ INVITATION ============ -->
+<section id="invitation">
+  <div class="wrap card-stage"><div class="card rv" id="card">
+    <svg class="top" viewBox="0 0 150 70" aria-hidden="true"><use href="#gopuram"/></svg>
+    <p class="sig" lang="te">వివాహ ఆహ్వానం</p>
+    <h2><em>The Wedding of</em><span data-bride></span><em>&amp;</em><span data-groom></span></h2>
+    <p class="msg" data-msg></p>
+    <dl><dd data-date></dd><dd data-time></dd><dd data-venue></dd><dd><span data-city></span>, <span data-state></span></dd></dl>
+  </div></div>
+</section>
+
+<!-- ============ COUNTDOWN ============ -->
+<section id="countdown" class="dark center">
+  <div class="wrap rv">
+    <p class="tel" lang="te">శుభ ముహూర్తం</p>
+    <h2>The sacred day approaches</h2>
+    <div class="grid" id="cd" role="timer" aria-live="off"></div>
+    <p class="sub" id="cdNote"></p>
+  </div>
+</section>
+
+<!-- ============ STORY (rendered by js/features/story.js) ============ -->
+<section id="story">
+  <div class="wrap">
+    <div class="center rv"><h2>Our story</h2><div class="rule">❖</div><p class="sub" data-storyintro></p></div>
+    <div class="tl" id="tl"></div>
+  </div>
+</section>
+
+<!-- ============ DIVIDER / BLESSING ============ -->
+<section id="divider">
+  <div class="rv">
+    <div class="arch" role="img" aria-label="Illustration placeholder: Rama and Sita in a temple arch">
+      <svg viewBox="0 0 300 400" id="arch" aria-hidden="true"></svg>
+    </div>
+    <blockquote><span class="tel" lang="te" style="display:block;font-style:normal;font-size:1.1rem;margin-bottom:8px">[BLESSING_TELUGU]</span><span data-blessing></span></blockquote>
+  </div>
+</section>
+
+<!-- ============ EVENTS (rendered by js/features/events.js) ============ -->
+<section id="events">
+  <div class="wrap">
+    <div class="center rv"><p class="tel" lang="te">వేడుకలు</p><h2>The celebrations</h2></div>
+    <div class="evs" id="evs"></div>
+  </div>
+</section>
+
+<!-- ============ GALLERY (rendered by js/features/gallery.js) ============ -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="center rv"><h2>Moments we'll cherish</h2><p class="tel" lang="te" style="margin-top:8px">[TELUGU_GALLERY_SUBTITLE]</p></div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<!-- ============ VENUE ============ -->
+<section id="venue" class="dark">
+  <div class="wrap two">
+    <div class="rv">
+      <h2>The venue</h2>
+      <h3 style="color:var(--gold);font-size:1.8rem;margin-top:16px" data-venue></h3>
+      <dl class="venue-list">
+        <div><dt>Address</dt><dd><span data-addr></span>, <span data-city></span>, <span data-state></span></dd></div>
+        <div><dt>Venue contact</dt><dd data-vcontact></dd></div>
+        <div><dt>Wedding contact</dt><dd data-contact></dd></div>
+      </dl>
+      <p data-vdesc></p><br>
+      <a class="btn" data-maps target="_blank" rel="noopener">Get directions</a>
+    </div>
+    <div class="ph rv" style="aspect-ratio:4/3" data-img="VENUE_PHOTO"></div>
+  </div>
+</section>
+
+<!-- ============ FAMILY ============ -->
+<section id="family">
+  <div class="wrap center rv">
+    <p class="tel" lang="te">ఆశీస్సులతో</p>
+    <h2>With the blessings of</h2>
+    <div class="fam">
+      <div><small>Bride's family</small><div id="bp"></div></div><div class="pil"></div>
+      <div><small>Groom's family</small><div id="gp"></div></div>
+    </div>
+    <p class="fm" style="font:italic 1.1rem var(--serif);margin-top:30px" data-extended></p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="dark center">
+  <div class="wrap rv">
+    <h2>Questions? Talk to us</h2>
+    <p class="sub">[CONTACT_NUMBER]</p><br>
+    <a class="btn wa" data-wa target="_blank" rel="noopener">Chat with us on WhatsApp</a>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section id="closing" class="dark">
+  <div class="wrap rv">
+    <p class="tel" lang="te" data-finalte></p><br>
+    <div class="lines">Two families.<br>One sacred beginning.<br>A lifetime together.</div>
+    <h2><span data-bride></span> &amp; <span data-groom></span></h2>
+    <p data-date></p>
+    <p class="sub" style="margin-top:30px;font-style:italic;font-family:var(--serif);font-size:1.3rem">With love,<br><span data-bfam></span> &amp; <span data-gfam></span></p>
+    <div class="lamps" aria-hidden="true"><svg viewBox="0 0 54 50"><use href="#lamp"/></svg><svg viewBox="0 0 54 50"><use href="#lamp"/></svg><svg viewBox="0 0 54 50"><use href="#lamp"/></svg></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p style="font:1.5rem var(--serif)"><span data-bride></span> &amp; <span data-groom></span></p>
+  <p><span data-date></span></p>
+  <p><span data-contact></span> · <a data-wa target="_blank" rel="noopener">WhatsApp</a> · <a data-insta target="_blank" rel="noopener">Instagram</a></p>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="x" aria-label="Close">✕</button><button class="pv" aria-label="Previous photo">‹</button><button class="nx" aria-label="Next photo">›</button>
+  <div class="stage" id="lbStage"></div><div class="cap" id="lbCap"></div>
+</div>
+
+<!-- ============ SVG SPRITES (must stay inline for <use>) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="gopuram" viewBox="0 0 150 70"><g fill="none" stroke="#d9a441" stroke-width="1.5"><path d="M10 68h130M22 68V52h106v16M34 52V38h82v14M46 38V26h58v12M58 26V16h34v10M68 16V9h14v7M75 9V2"/><path d="M30 60h90M42 45h66M52 32h46" stroke-dasharray="2 3"/></g></symbol>
+  <symbol id="lamp" viewBox="0 0 54 50"><g class="flame"><path d="M27 4c7 8 9 15 0 22-9-7-7-14 0-22z" fill="#f6a93a"/></g><path d="M5 30h44c0 10-9 17-22 17S5 40 5 30z" fill="#8a3a1c" stroke="#d9a441"/></symbol>
+</defs></svg>
+
+<!-- ============ SCRIPTS (classic, ordered; no build step) ============ -->
+<!-- 1 config + data -->
+<script src="js/config/site.config.js"></script>
+<script src="js/data/nav.js"></script>
+<script src="js/data/story.js"></script>
+<script src="js/data/events.js"></script>
+<script src="js/data/gallery.js"></script>
+<!-- 2 core helpers -->
+<script src="js/core/dom.js"></script>
+<script src="js/core/photo.js"></script>
+<!-- 3 features -->
+<script src="js/features/content.js"></script>
+<script src="js/features/art.js"></script>
+<script src="js/features/nav.js"></script>
+<script src="js/features/story.js"></script>
+<script src="js/features/events.js"></script>
+<script src="js/features/gallery.js"></script>
+<script src="js/features/countdown.js"></script>
+<script src="js/features/effects.js"></script>
+<script src="js/features/petals.js"></script>
+<script src="js/features/music.js"></script>
+<script src="js/features/intro.js"></script>
+<!-- 4 boot -->
+<script src="js/main.js"></script>
+</body>
+</html>

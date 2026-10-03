@@ -1,0 +1,5 @@
+#closing{text-align:center;overflow:hidden;min-height:100svh;display:grid;place-items:center}
+#closing .lines{font:clamp(1.3rem,4vw,2.2rem)/1.5 var(--serif);letter-spacing:.14em;text-transform:uppercase}
+#closing h2{color:var(--gold);margin:30px 0 6px;font-size:clamp(2.6rem,8vw,5.5rem)}
+.lamps{display:flex;justify-content:center;gap:40px;margin-top:40px}
+.lamps svg{width:34px}

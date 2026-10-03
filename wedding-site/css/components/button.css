@@ -1,0 +1,5 @@
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border:1px solid var(--gold);background:transparent;color:var(--cream);font:500 .85rem var(--sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:box-shadow .4s,background .4s;min-height:48px}
+.btn:hover{box-shadow:0 0 30px rgba(217,164,65,.45);background:rgba(217,164,65,.12)}
+.btn.solid{background:var(--maroon);border-color:var(--maroon);color:var(--cream)}
+.wa{background:#1f6b45;border-color:#1f6b45;color:#fff}
+.wa:hover{background:#25804f}

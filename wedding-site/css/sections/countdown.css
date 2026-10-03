@@ -1,0 +1,4 @@
+#countdown .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,3vw,28px);max-width:720px;margin:36px auto 0}
+.cd{border:1px solid rgba(217,164,65,.5);padding:20px 4px;background:rgba(255,255,255,.03)}
+.cd b{display:block;font:400 clamp(2rem,8vw,4rem) var(--serif);color:var(--gold);font-variant-numeric:tabular-nums}
+.cd span{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
